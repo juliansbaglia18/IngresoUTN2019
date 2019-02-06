@@ -4,7 +4,6 @@ function Mostrar()
 {
     var bel;
     bel = document.getElementById("elNombre").value;
-    delay(3);
     alert(bel);
     
 }
