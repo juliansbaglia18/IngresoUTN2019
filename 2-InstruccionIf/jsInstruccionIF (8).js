@@ -1,8 +1,12 @@
+var bel;
+
 function Mostrar()
 {
-//tomo la edad  
+//tomo la edad 
 
-	
+bel = document.getElementById("edad").value;
 
-
-}//FIN DE LA FUNCIÓN
+if(bel>17 && document.getElementById("estadoCivil").value == "Soltero"){
+        alert("Es soltero y no es menor jaja same");
+    }
+}
