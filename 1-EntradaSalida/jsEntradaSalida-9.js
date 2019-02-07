@@ -14,5 +14,9 @@ function MostrarAumento()
     kmi = bel * 0.1;
     bel = bel + kmi;
 
+    bel = bel.toFixed(2);
+    kmi = kmi.toFixed(2);
+
     document.getElementById("resultado").value = bel;
+    alert("El aumento es " + kmi);
 }

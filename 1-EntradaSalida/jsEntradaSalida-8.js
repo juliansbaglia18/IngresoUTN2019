@@ -5,23 +5,13 @@ ej.: "El resto es 0 ."*/
 var bel;
 var kmi;
 var kia;
-var xim;
 
 function SacarResto()
 {
     bel = document.getElementById("numeroDividendo").value;
     kmi = document.getElementById("numeroDivisor").value;
 
-    kmi = parseInt(kmi);
-    bel = parseInt(bel);
+    kia = bel % kmi;
 
-    kia = bel / kmi;
-
-    xim = kia;
-
-    kia = parseInt(kia);
-
-    xim = xim - kia;
-
-    alert("El resultado es: " + kia + ". El resto: " + xim + ".");
+  alert("El resto: " + kia + ".");
 }
