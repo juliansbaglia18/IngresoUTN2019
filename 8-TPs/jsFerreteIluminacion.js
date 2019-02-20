@@ -12,43 +12,45 @@ var lamparas;
 var prelamparas
 var descuento;
 var total;
+var iibb;
+
 function CalcularPrecio () 
 {
     lamparas = parseInt (document.getElementById("Cantidad").value);
     prelamparas = lamparas * 35;
     
 
-    if(lamparas > 5){
+    if (lamparas > 5){
         total = prelamparas - (prelamparas * 0.5);
         //document.getElementById("precioDescuento").value = "$" + total;
 
     }
-    else if(lamparas == 5){
-        if(document.getElementById("Marca").value == "ArgentinaLuz"){
+    else if (lamparas == 5){
+        if (document.getElementById("Marca").value == "ArgentinaLuz"){
             total = prelamparas - (prelamparas * 0.4);
         }
-        else{
+        else {
             total = prelamparas - (prelamparas * 0.3);
         }
     }
 
-    else if(lamparas == 4){
-        if(document.getElementById("Marca").value == "ArgentinaLuz" || document.getElementById("Marca").value == "FelipeLamparas"){
+    else if (lamparas == 4){
+        if (document.getElementById("Marca").value == "ArgentinaLuz" || document.getElementById("Marca").value == "FelipeLamparas"){
             total = prelamparas - (prelamparas * 0.25);
         }
-        else{
+        else {
             total = prelamparas - (prelamparas * 0.2);
         }
     }
 
-    else if(lamparas == 3){
-        if(document.getElementById("Marca").value == "ArgentinaLuz"){
+    else if (lamparas == 3){
+        if (document.getElementById("Marca").value == "ArgentinaLuz"){
             total = prelamparas - (prelamparas * 0.15);
         }
-        else if(document.getElementById("Marca").value == "FelipeLamparas"){
+        else if (document.getElementById("Marca").value == "FelipeLamparas"){
             total = prelamparas - (prelamparas * 0.1);
         }
-        else{
+        else {
             total = prelamparas - (prelamparas * 0.05);
         }   
     }
@@ -58,12 +60,14 @@ function CalcularPrecio ()
         total = prelamparas;
     }
 
-    if(total >= 120){
-        var iibb;//
-        iibb = prelamparas * 0.1;
+    if (total >= 120){
+        iibb = total * 0.1;
         total = iibb + total;
-        alert("IIBB Usted pago $" + iibb );
-
+        alert("Precio total: $" + total + ". IIBB Usted pago $" + iibb + ".");
+        document.getElementById("precioDescuento").value = total / lamparas;
     }
-    document.getElementById("precioDescuento").value = "$" + total;
+    else {
+    alert ("Precio total: $" + total + ".");
+    document.getElementById("precioDescuento").value = total / lamparas;
+    }
 }

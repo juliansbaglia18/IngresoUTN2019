@@ -12,8 +12,11 @@ var contadorIntentos;
 var numero;
 function comenzar()
 {
+  document.getElementById("numero").value = "";
+
 	//Genero el número RANDOM entre 1 y 100
-	numeroSecreto = (Math.random()*100).toFixed();
+	//numeroSecreto = (Math.random()*100).toFixed();
+  numeroSecreto = Math.floor(Math.random()* 100 + 1);
 	//alert(numeroSecreto );
   alert("Numero secreto generado.");
   contadorIntentos = 0;

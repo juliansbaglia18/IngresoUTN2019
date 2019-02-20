@@ -19,8 +19,5 @@ switch(mesDelAño){
     case "Diciembre":
     alert("Felices fiestas!!!")
     break;
-
-}
-
-
+    }
 }//FIN DE LA FUNCIÓN

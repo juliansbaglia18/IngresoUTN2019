@@ -7,7 +7,7 @@ var mesDelAño = document.getElementById('mes').value;
 	
 	switch(mesDelAño){
         case "Febrero":
-        alert("Este mes tiene 29 dias");
+        alert("Este mes tiene 28 dias");
         break;
 
         case "Enero":
@@ -23,7 +23,4 @@ var mesDelAño = document.getElementById('mes').value;
         default:
         alert("Este mes tiene 30 dias");
     }
-
-
-
 }//FIN DE LA FUNCIÓN
