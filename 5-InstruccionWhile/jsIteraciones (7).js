@@ -8,14 +8,16 @@ function Mostrar()
 	
 do {
 
-	bel = parseInt(prompt("ingrese un numero:"));
-
+	bel = parseInt(prompt("Ingrese un numero:"));
+	while(isNaN(bel)){
+		bel = parseInt(prompt("Numero invalido. Ingrese un numero: "))
+	}
 	acumulador = bel + acumulador;
 	contador++;
-	alert(acumulador);
+	//alert(acumulador);
 	respuesta = confirm("desea seguir ingresando numeros?");
 } while(respuesta==true);
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓNsa
